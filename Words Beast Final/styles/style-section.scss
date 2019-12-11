@@ -1,0 +1,69 @@
+@import "./variables";
+
+#field {
+  position: absolute;
+  top: $navHeight;
+  left: 10vw;
+  width: 80vw;
+  height: 100vh - $navHeight;
+  background-color: rgb(230, 230, 230);
+  border: solid 1vw $backgroundColorIII;
+  border-top: none;
+  border-bottom:none;
+  // border-left: solid 1vw $backgroundColorIII;
+  z-index: 0;
+
+  #uploaded-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  #canvas {
+    @extend #uploaded-text;
+    z-index: -1;
+  }
+
+}
+
+.on-off-btn {
+  display: block;
+  position: absolute;
+  top: 8vh;
+  right: 1.5vw;
+  width: 7vw;
+  height: 7vw;
+  border: solid 0.3vw $buttonColorIII;
+  border-radius: 50%;
+  background-color: $buttonColorI;
+  color: white;
+  text-align: center;
+  padding-top:1.5vw;
+  font-size: 2vw;
+  line-height: 3vw;
+  cursor: pointer;
+    &:hover {
+      width: 8vw;
+      height: 8vw;
+      right: 1vw;
+      padding-top: 2vw;
+      border-color: white;
+    }
+}
+
+.on-off-btn-active {
+  @extend .on-off-btn;
+    background-color: $buttonColorII;
+    border-color: $buttonColorIV;
+}
+
+#uploaded-text {
+  padding: 0;
+  margin: 0;
+  line-height: 4vh;
+  font-size: 3vh;
+  text-align: justify;
+  overflow: hidden;
+}

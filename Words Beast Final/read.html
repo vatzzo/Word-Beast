@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width,initial-scale=1.0"/>
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge"/>
+    <meta http-equiv = "author" content = "Mateusz Łata"/>
+    <link rel = "stylesheet" type = "text/css" href = "styles/style-nav.min.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "styles/style-section.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <title>Words Beast App</title>
+  </head>
+  <body>
+    <nav>
+      <!-- BURGER -->
+      <div class = "burger">
+        <div class = "burger-layer"></div>
+        <div class = "burger-layer"></div>
+        <div class = "burger-layer"></div>
+      </div>
+      <!-- NAVIGATION OPTIONS -->
+      <ul class = "nav-options-inactive">
+        <li><a href="http://127.0.0.1:3000/">home</a></li>
+        <li><a href="http://127.0.0.1:3000/read.html">app</a></li>
+      </ul>
+      <!-- ANIMATION OPTIONS BUTTON INACTIVE -->
+      <div class = "animation-options-btn-inactive">
+      </div>
+      <!-- ANIMATION OPTIONS -->
+      <div class="animation-options-inactive">
+        <!-- ANIMATION OPTIONS BUTTON ACTIVE -->
+        <div class = "animation-options-btn-active">
+        </div>
+        <!-- ANIMATION OPTIONS CONTAINER -->
+        <div class="animation-options-container">
+          <!-- TEXT -->
+          <div class="single-option">
+            <input type="text" id="text"/>
+            <input type="submit" id="submit" value="confirm"/>
+            <label for="text">text</label>
+          </div>
+          <!-- METHOD -->
+          <div class="single-option">
+            <select name="method" id="method">
+              <option value="1">line by line</option>
+              <option value="2">double line</option>
+              <option value="3">crosswise</option>
+            </select>
+            <label for="method">method</label>
+          </div>
+          <!-- SPEED -->
+          <div class="single-option">
+            <input type="range" min='1' max='6' value='3' id='slider-speed'>
+            <label for="slider-speed">speed</label>
+          </div>
+          <!-- RESTART -->
+          <div class="single-option">
+            <input type="button" id="restart" value="restart"/>
+            <label for="restart">restart</label>
+          </div>
+          <!-- IMAGE -->
+          <img src="icons/WordBeastBig.png" alt="Words Beast" class="single-option" id="logo">
+        </div>
+    </nav>
+    <div class="on-off-btn" id='on-off-btn'>ON</div>
+    <section id="field">
+      <canvas id="canvas"></canvas>
+      <p id="uploaded-text"></p>
+    </section>
+
+
+    <footer>
+    </footer>
+    <script src='nav-slides.js'></script>
+    <script src='main.js'></script>
+  </body>
+  </html>

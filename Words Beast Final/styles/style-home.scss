@@ -1,0 +1,89 @@
+@import "./variables";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(216, 251, 222, 0.68);
+}
+
+$descFontColor : rgb(104, 113, 164);
+$descFontColorShadow : rgb(147, 158, 223);
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.desc-logo {
+  .container-logo {
+    margin-top: 8vh;
+    margin-left: 20%;
+    @include flexCenter(column);
+    width: 60%;
+    height: auto;
+
+    img {
+      display: block;
+      width: 60%;
+      height: auto;
+    }
+
+    p {
+      text-transform: uppercase;
+      margin-top: 2vh;
+      font-size: 4.5vh;
+      letter-spacing: 0.3vw;
+      font-weight: bold;
+      color: $descFontColor;
+      text-shadow: 0.3vh 0.3vh 0 $descFontColorShadow;
+    }
+  }
+}
+
+.desc {
+  margin-top: 6vh;
+  // margin-left: 5%;
+  @include flexCenter(row);
+  width: 100%;
+  border: solid 2px $backgroundColorIV;
+  background-color: rgb(207, 213, 251);
+  padding: 3vh;
+  // border-radius: 10vh;
+
+  div {
+    @include flexCenter(column);
+    width: 33%;
+
+    img {
+      display: block;
+      width: 60%;
+      height: auto;
+    }
+
+    p {
+      padding: 3vh;
+      width: 80%;
+      text-align: justify;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 6vh;
+  color: white;
+  font-size: 4.5vh;
+  background-color: $backgroundColorI;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .desc {
+    flex-direction: column;
+    div {
+      width: 60%;
+    }
+  }
+}
