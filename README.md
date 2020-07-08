@@ -1,7 +1,7 @@
 # Word-Beast - Application Supporting Fast Reading. 
 The project was made after I have seen a quite nice
 position in the book shoop concering the art of fast reading
-- Tom Buzan's "Speed Reading". There were a plenty of techniques
+: Tom Buzan's "Speed Reading". There were a plenty of techniques
 that could be applied to increase the process of reading.
 The main one a "pointer method" was chosen and is the method
 application is based on. To proceed with an animation I used
